@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .toggle-checkbox:checked {
+    @apply right-0 border-indigo-600;
+  }
+  .toggle-checkbox:checked + .toggle-bg {
+    @apply bg-indigo-600;
+  }
+  .toggle-checkbox {
+    @apply transition-all duration-300;
+    right: 0;
+  }
+  .toggle-checkbox:checked {
+    right: auto;
+    left: 1.5rem;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
